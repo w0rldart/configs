@@ -21,7 +21,15 @@
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 ## Load the config file
-source $SCRIPT_DIR/config.sh
+configFile=$SCRIPT_DIR/config.sh
+
+if [ ! -f $configFile ]; then
+    echo
+    echo -e "\033[31m config.sh file is missing\033[0m"
+    echo
+else
+    source $configFile
+fi
 
 
 ###################
@@ -61,7 +69,7 @@ function backupDatabases()
         ## Compress the sql
         echo " - Compressing & Deleting the output file"
         `gzip -f $BACKUP_FILE`
-		
+
 		if [ -f $BACKUP_FILE ]; then
 			rm $BACKUP_FILE
 		fi
@@ -71,13 +79,13 @@ function backupDatabases()
 function backupImages()
 {
 	echo "Going to $SOURCE_PATH"
-	echo 
-	
+	echo
+
 	# Sleep for 1 second
 	sleep 1
-	
+
 	cd $SOURCE_PATH
-	
+
     ## Iterate the directories to backup
     for DIR_TO_BACKUP in $DIRECTORIES_TO_BACKUP
     do
@@ -164,20 +172,15 @@ function syncAll()
 # Display available commands
 ##
 if [ $# -lt 1 ]; then
-    echo "Please enter an action to do"
-    echo
-    echo "Backups commands: "
+    echo "Available commands: "
     echo "  |"
     echo "  |-> backupDatabases"
     echo "  |-> backupImages"
-    echo "  |"
     echo "  |-> backupAll"
-    echo
-    echo "Backups commands: "
+    echo "  |"
     echo "  |"
     echo "  |-> syncDatabases"
     echo "  |-> syncImages"
-    echo "  |"
     echo "  |-> syncAll"
     exit 1
 else

@@ -1,3 +1,3 @@
-# git-prompt
+Collection of configuration files and custom tools.
 
-    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+See documentation for each, in their respective folders.

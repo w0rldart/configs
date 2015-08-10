@@ -26,9 +26,15 @@
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 ## Load the config file
-source $SCRIPT_DIR/config.sh
+configFile=$SCRIPT_DIR/config.sh
 
-DEFAULT_FILES_FOLDER="$SCRIPT_DIR/../defaults"
+if [ ! -f $configFile ]; then
+    echo
+    echo -e "\033[31m config.sh file is missing\033[0m"
+    echo
+else
+    source $configFile
+fi
 
 ###
 ## Functions to sync
@@ -172,9 +178,7 @@ function daSQL()
     mySQL="mysql -u $MYSQL_USER -p$MYSQL_PASS"
 
     if [ -z "$1" ]; then
-        echo "Please enter an action to do"
-        echo
-        echo "List of available actions: "
+        echo "List of available commands: "
         echo "   - createDB [dbname]"
         echo "   - dropDB [dbname]"
         echo "   - listDBs"
@@ -250,18 +254,16 @@ confirm ()
 # Display available commands
 ##
 if [ $# -lt 1 ]; then
-    echo "Please enter an action to do"
-    echo
-    echo "Available actions: "
+    echo "Available commands: "
     echo "  |"
     echo "  |-> syncDatabases"
     echo "  |-> syncImages"
-    echo "  |-> syncAll (Invokes all the other sync commands)"
+    echo "  |-> syncAll"
     echo "  |"
     echo "  |"
     echo "  |-> deployDatabases"
     echo "  |-> deployImages"
-    echo "  |-> deployAll (Invokes all the other deploy commands)"
+    echo "  |-> deployAll"
     echo "  |"
     echo "  |-> daSQL"
     exit 1
