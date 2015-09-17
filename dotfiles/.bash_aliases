@@ -10,6 +10,7 @@ alias uu='sudo apt-get update && sudo apt-get upgrade'
 ##
 # Custom stuff
 ##
+alias ls='ls --block-size=M'
 alias webPerms='find  ./ -type d -exec chmod 755 {} \; && find ./ -type f -exec chmod 644 {} \;'
 alias largesDirectories='du -hsx * | sort -rh | head -10'
 alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
