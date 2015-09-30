@@ -6,7 +6,7 @@ alias http-restart='invoke-rc.d nginx restart && invoke-rc.d php5-fpm restart'
 
 alias aptitude='sudo aptitude'
 alias apt-get='sudo apt-get'
-alias uu='sudo apt-get update && sudo apt-get upgrade'
+alias uu='apt-get update && apt-get upgrade'
 
 alias ls='ls --block-size=M'
 alias rm='rm -i'
