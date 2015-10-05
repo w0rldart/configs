@@ -1,0 +1,22 @@
+{
+	"autocomplete": true,
+	"enable_auto_align": false,
+	"format_on_save": false,
+	"indent_with_space": 4,
+	"passes":
+	[
+		"OnlyOrderUseClauses",
+		"AlignDoubleArrow",
+		"AlignDoubleSlashComments",
+		"AlignGroupDoubleArrow",
+		"StripExtraCommaInArray",
+		"StripNewlineAfterClassOpen",
+		"ReindentAndAlignObjOps"
+	],
+	"psr1": true,
+	"psr1_naming": true,
+	"psr2": true,
+	"smart_linebreak_after_curly": true,
+	"version": 1
+}
+

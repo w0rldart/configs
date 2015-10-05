@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"Emmet",
+		"GitGutter",
+		"HTML Snippets",
+		"Laravel 5 Snippets",
+		"Laravel Blade Highlighter",
+		"Material Theme",
+		"Package Control",
+		"phpfmt",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-php"
+	]
+}
+

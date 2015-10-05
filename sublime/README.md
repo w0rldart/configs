@@ -1,0 +1,3 @@
+ - `phpfmt.sublime-settings` into Preferences -> Package Settings -> phpfmt -> Settings - User
+ - `Preferences.sublime-settings` into Preferences -> Settings - User
+ - `Package Control.sublime-settings` into Preferences -> Package Settings -> Package Control -> Settings - User
