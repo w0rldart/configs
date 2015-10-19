@@ -6,10 +6,15 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Babel",
 		"BracketHighlighter",
+		"ColorPicker",
+		"DocBlockr",
 		"Emmet",
 		"GitGutter",
 		"HTML Snippets",
+		"HTML-CSS-JS Prettify",
+		"JavaScript Completions",
 		"Laravel 5 Snippets",
 		"Laravel Blade Highlighter",
 		"LESS",
@@ -20,6 +25,8 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-htmlhint",
 		"SublimeLinter-php"
 	]
 }
