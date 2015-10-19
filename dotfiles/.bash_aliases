@@ -3,6 +3,7 @@
 ##
 alias invoke-rc.d='sudo invoke-rc.d'
 alias http-restart='invoke-rc.d nginx restart && invoke-rc.d php5-fpm restart'
+alias lemp-stop='invoke-rc.d mysql stop && invoke-rc.d nginx stop && invoke-rc.d php5-fpm stop'
 
 alias aptitude='sudo aptitude'
 alias apt-get='sudo apt-get'
