@@ -9,7 +9,7 @@ alias aptitude='sudo aptitude'
 alias apt-get='sudo apt-get'
 alias uu='apt-get update && apt-get upgrade'
 
-alias ls='ls --block-size=M'
+alias ls='ls --block-size=M --color'
 alias rm='rm -i'
 alias mv='mv -i'
 
