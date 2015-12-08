@@ -1,15 +1,18 @@
 {
 	"autocomplete": true,
 	"enable_auto_align": false,
+	"excludes":
+	[
+		"OrderAndRemoveUseClauses"
+	],
 	"format_on_save": false,
 	"indent_with_space": 4,
+	"laravel_style": true,
 	"passes":
 	[
-		"OnlyOrderUseClauses",
 		"AlignDoubleArrow",
 		"AlignDoubleSlashComments",
 		"AlignGroupDoubleArrow",
-		"StripExtraCommaInArray",
 		"StripNewlineAfterClassOpen",
 		"ReindentAndAlignObjOps"
 	],
@@ -19,4 +22,3 @@
 	"smart_linebreak_after_curly": true,
 	"version": 1
 }
-
