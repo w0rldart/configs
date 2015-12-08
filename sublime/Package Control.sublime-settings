@@ -5,16 +5,19 @@
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
 		"Babel",
 		"BracketHighlighter",
 		"ColorPicker",
 		"DocBlockr",
 		"Emmet",
+		"Focus File on Sidebar",
 		"GitGutter",
 		"HTML Snippets",
 		"HTML-CSS-JS Prettify",
 		"JavaScript Completions",
+		"Laravel 5 Artisan",
 		"Laravel 5 Snippets",
 		"Laravel Blade Highlighter",
 		"LESS",
@@ -27,7 +30,10 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-htmlhint",
-		"SublimeLinter-php"
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"SublimeLinter-phpmd",
+		"TodoReview"
 	]
 }
 
