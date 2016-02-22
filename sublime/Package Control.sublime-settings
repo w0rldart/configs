@@ -8,8 +8,8 @@
 		"AdvancedNewFile",
 		"Alignment",
 		"Babel",
+		"Behat",
 		"BracketHighlighter",
-		"ColorPicker",
 		"DocBlockr",
 		"Emmet",
 		"Focus File on Sidebar",
@@ -33,7 +33,8 @@
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
 		"SublimeLinter-phpmd",
-		"TodoReview"
+		"TodoReview",
+		"Xdebug Client"
 	]
 }
 
