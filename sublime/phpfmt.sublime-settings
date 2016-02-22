@@ -1,18 +1,20 @@
 {
 	"autocomplete": true,
+	"autoimport": true,
 	"enable_auto_align": false,
 	"excludes":
 	[
-		"OrderAndRemoveUseClauses"
+		"OrderAndRemoveUseClauses",
+		"AlignDoubleArrow",
+		"AlignGroupDoubleArrow",
+		"SortUseNameSpace"
 	],
 	"format_on_save": false,
 	"indent_with_space": 4,
 	"laravel_style": true,
 	"passes":
 	[
-		"AlignDoubleArrow",
 		"AlignDoubleSlashComments",
-		"AlignGroupDoubleArrow",
 		"StripNewlineAfterClassOpen",
 		"ReindentAndAlignObjOps"
 	],
