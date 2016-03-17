@@ -11,7 +11,7 @@
 ##   1.1 - Migrated towards a more functional way. Every action has its own function now
 ##   1.2 - Script now includes a config file, instead of running custom config
 ##   1.3 - Added daSQL helper function, for common MySQL commands
-##	     - Added confirm helper function, that allows to run a confirmation before a command
+##       - Added confirm helper function, that allows to run a confirmation before a command
 ##   1.4 - Added the option to process individual databases
 ##       - Renamed deployClones to deployAll
 ##       - Added deployImages
@@ -39,7 +39,7 @@ fi
 ###
 ## Functions to sync
 ##   Databases
-##	 Images
+##   Images
 ###
 function syncDatabases()
 {
@@ -85,8 +85,8 @@ function syncAll()
 
 ###
 ## Functions to deploy
-##	 Databases
-##	 Images
+##   Databases
+##   Images
 ###
 function deployDatabases()
 {
@@ -107,7 +107,7 @@ function deployDatabases()
     read -e -a options
 
     if [ ${#options[*]} == 0 ]; then
-  	    echo "Processing all databases"
+        echo "Processing all databases"
         echo
         for SQL in $(ls *.gz);
         do
@@ -117,11 +117,11 @@ function deployDatabases()
             zcat $SQL | mysql -u $MYSQL_USER -p$MYSQL_PASS
         done
     else
-    	echo
-	    echo "${#options[*]} database(s) to process"
-    	echo
-	    for database in ${options[*]}; do
-	        # Process the .sql files
+        echo
+        echo "${#options[*]} database(s) to process"
+        echo
+        for database in ${options[*]}; do
+            # Process the .sql files
             echo " - Processing $database"
             echo
             zcat $database | mysql -u $MYSQL_USER -p$MYSQL_PASS
@@ -187,48 +187,48 @@ function daSQL()
         echo "   - populateHard [dbname] [file]  # This deletes the database, creates it again"
         echo "                                   # and then imports the sql file"
         echo
-		exit 1
+        exit 1
     fi
 
     if [ "$1" == 'listDBs' ]; then
         $mySQL -e "SHOW DATABASES;"
-		exit $?
+        exit $?
     fi
 
     if [ "$1" == 'console' ]; then
-		$mySQL
+        $mySQL
     fi
 
     if [ ! -z "$2" ]; then
         if [ "$1" == 'createDB' ]; then
             $mySQL -e "CREATE DATABASE $2 CHARACTER SET utf8 COLLATE utf8_general_ci;"
-			exit $?
+            exit $?
         fi
 
         if [ "$1" == 'dropDB' ]; then
             confirm "Drop $2 database?" && $mySQL -e "DROP DATABASE $2;"
-			exit $?
+            exit $?
         fi
-	
-		if [ ! -z "$3" ]; then
+    
+        if [ ! -z "$3" ]; then
             if [ "$1" == 'populateSoft' ]; then
                 $mySQL $2 < $3
                 exit $?
             fi
             
-			if [ "$1" == 'populateHard' ]; then
+            if [ "$1" == 'populateHard' ]; then
                 confirm "Populate hard $2? " && daSQL dropDB $2;
                 daSQL createDB $2;
                 daSQL populateSoft $2 $3;
-				exit $?
+                exit $?
             fi
-		else
-			echo "Missing 3rd argument"
-			exit 2
-		fi
+        else
+            echo "Missing 3rd argument"
+            exit 2
+        fi
     else
-		echo "Missing 2nd argument"
-		exit 2
+        echo "Missing 2nd argument"
+        exit 2
     fi
 }
 
