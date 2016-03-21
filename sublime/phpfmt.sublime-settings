@@ -16,11 +16,12 @@
 	[
 		"AlignDoubleSlashComments",
 		"StripNewlineAfterClassOpen",
-		"ReindentAndAlignObjOps"
+		"ReindentAndAlignObjOps",
+		"ReindentSwitchBlocks"
 	],
 	"psr1": true,
-	"psr1_naming": true,
+	"psr1_naming": false,
 	"psr2": true,
 	"smart_linebreak_after_curly": true,
-	"version": 1
+	"version": 4
 }
