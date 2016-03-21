@@ -1,15 +1,17 @@
 {
     "patterns": {
-        "TODO": "(@?)TODO[\\s]*?:[\\s]*(?P<todo>.*)$",
-        "NOTE": "(@?)NOTE[\\s]*?:[\\s]*(?P<note>.*)$",
+        "TODO": "((@?)(TODO|todo)([\\s]*?)(:?)[\\s]*(?P<todo>.*)$)",
+        "NOTE": "((@?)(NOTE|note)([\\s]*?)(:?)[\\s]*(?P<note>.*)$)",
         "FIXME": "(@?)FIX ?ME[\\s]*?:[\\s]*(?P<fixme>.*)$",
-        "CHANGED": "(@?)CHANGED[\\s]*?:[\\s]*(?P<changed>.*)$"
+        "CHANGED": "((@?)(CHANGED|changed)([\\s]*?)(:?)[\\s]*(?P<changed>.*)$)"
     },
     "exclude_folders": [
         "*.git*",
         "*vendor*",
         "*node_modules*",
         "*bower_components*",
-        "*public*"
+        "*public*",
+        "*.vagrant*",
+        "*.idea*"
     ]
 }
