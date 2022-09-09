@@ -1,2 +1,9 @@
+# Override default behaviour
+alias ls='ls --color'
+alias rm='rm -i'
+alias mv='mv -i'
+alias ll='ls -al'
+
+# Custom stuff
 alias largestDirectories='du -hsx * | sort -rh | head -10'
 alias socksChrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server=socks5://127.0.0.1:8888'

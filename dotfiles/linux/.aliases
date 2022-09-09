@@ -1,3 +1,4 @@
+# APT
 alias uu='apt-get update && apt-get upgrade'
 
 # Override default behaviour
@@ -5,18 +6,13 @@ alias ls='ls --block-size=M --color'
 alias rm='rm -i'
 alias mv='mv -i'
 
-
-##
 # Custom stuff
-##
 alias webPerms='find  ./ -type d -exec chmod 755 {} \; && find ./ -type f -exec chmod 644 {} \;'
 alias t-apache-error='tail -f /var/log/apache2/error.log'
 alias t-nginx-error='tail -f /var/log/nginx/error.log'
+alias largestDirectories='du -hsx * | sort -rh | head -10'
 
-
-##
 # Git aliases
-##
 alias ga='git add'
 alias gp='git push'
 alias gl='git log'
