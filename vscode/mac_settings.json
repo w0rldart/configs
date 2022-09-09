@@ -1,0 +1,6 @@
+{
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "telemetry.telemetryLevel": "off"
+}
